@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: Pengertian dasar Pendata.md
+- file: Pengertian dasar Pendata
