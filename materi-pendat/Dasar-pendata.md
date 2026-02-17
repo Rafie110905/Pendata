@@ -93,3 +93,15 @@ Informasi ini dapat digunakan untuk:
 - Sangat penting dalam dunia bisnis, pendidikan, kesehatan, dan teknologi.
 
 Penambangan data menjadi salah satu bidang penting dalam perkembangan teknologi informasi modern.
+
+---
+
+---
+
+## 7. Ilustrasi Penambangan Data
+
+```{image} images/data-mining.png
+:alt: Ilustrasi Penambangan Data
+:width: 500px
+:align: center
+
