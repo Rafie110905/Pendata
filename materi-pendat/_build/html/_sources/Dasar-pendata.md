@@ -1,5 +1,5 @@
 ---
-title: Penambangan Data
+title: Dasar Penambangan Data
 ---
 
 # Penambangan Data
