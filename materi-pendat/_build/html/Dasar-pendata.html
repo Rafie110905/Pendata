@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selamat Datang &#8212; Web statis Penambangan Data</title>
+    <title>Dasar Penambangan Data &#8212; Web statis Penambangan Data</title>
   
   
   
@@ -57,10 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Dasar-pendata';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penambangan Data" href="Dasar-pendata.html" />
+    <link rel="prev" title="Selamat Datang" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,13 +141,14 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
   
   
-    <p class="title logo__title"> <img src="Logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+  
+    <p class="title logo__title"> <img src="_static/Logo.png" class="logo__image only-light" alt="My sample book - Home"/>
     <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   </p>
@@ -170,14 +169,14 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Selamat Datang
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Dasar-pendata.html">Dasar Penambangan Data</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dasar Penambangan Data</a></li>
 </ul>
 
     </div>
@@ -249,7 +248,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDasar-pendata.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,7 +278,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Dasar-pendata.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -350,7 +349,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -361,11 +362,30 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Selamat Datang</h1>
+    <h1>Dasar Penambangan Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">1. Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar">2. Konsep Dasar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-dalam-penambangan-data">3. Teknik dalam Penambangan Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-klasifikasi">a. Klasifikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-klastering">b. Klastering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-asosiasi">c. Asosiasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-regresi">d. Regresi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus">4. Contoh Kasus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-penambangan-data">5. Manfaat Penambangan Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">6. Kesimpulan</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -375,16 +395,111 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang">
-<h1>Selamat Datang di Web statis Penambangan Data<a class="headerlink" href="#selamat-datang" title="Link to this heading">#</a></h1>
-<p>Berikut adalah Perkenalan dari saya</p>
-<p> Nama : Moh Rafie Nazar J </p>
-<p> NIM : 240411100003 </p>
-<p> Fakultas : Teknik </p>
-<p> Prodi : Teknik Informatika </p>
-<p>Keahlian Sampingan : Selain minat saya di bidang IT saya juga berminat di bidang Trading, Seperti Saham,dan crypto saya sudah mendalami bidang ini saat 2023 ya alhamdulillah udah 3 tahun dan masih bertahan sampai sekarang,dan sekarang saya join di komunitas tradting di surabaya dan terkadang hadir di acara BEI ( Bursa Effect Indonesia)</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="penambangan-data">
+<h1>Dasar Penambangan Data<a class="headerlink" href="#penambangan-data" title="Link to this heading">#</a></h1>
+<section id="pengertian">
+<h2>1. Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<p>Penambangan Data (Data Mining) adalah proses menemukan pola, hubungan, atau informasi tersembunyi dari kumpulan data dalam jumlah besar menggunakan teknik statistik, matematika, dan machine learning.</p>
+<p>Penambangan data membantu mengubah data mentah menjadi informasi yang dapat digunakan untuk pengambilan keputusan.</p>
+</section>
+<hr class="docutils" />
+<section id="konsep-dasar">
+<h2>2. Konsep Dasar<a class="headerlink" href="#konsep-dasar" title="Link to this heading">#</a></h2>
+<p>Penambangan data merupakan bagian dari proses Knowledge Discovery in Databases (KDD). Tahapan dalam proses ini meliputi:</p>
+<ol class="arabic simple">
+<li><p>Seleksi data</p></li>
+<li><p>Pembersihan data (data cleaning)</p></li>
+<li><p>Transformasi data</p></li>
+<li><p>Proses penambangan data</p></li>
+<li><p>Evaluasi dan interpretasi hasil</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="teknik-dalam-penambangan-data">
+<h2>3. Teknik dalam Penambangan Data<a class="headerlink" href="#teknik-dalam-penambangan-data" title="Link to this heading">#</a></h2>
+<section id="a-klasifikasi">
+<h3>a. Klasifikasi<a class="headerlink" href="#a-klasifikasi" title="Link to this heading">#</a></h3>
+<p>Teknik untuk mengelompokkan data ke dalam kategori tertentu berdasarkan model yang telah dibuat.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>Menentukan apakah email termasuk spam atau tidak.</p></li>
+<li><p>Menentukan kelulusan mahasiswa berdasarkan nilai.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="b-klastering">
+<h3>b. Klastering<a class="headerlink" href="#b-klastering" title="Link to this heading">#</a></h3>
+<p>Teknik untuk mengelompokkan data berdasarkan kemiripan tanpa label yang telah ditentukan sebelumnya.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>Segmentasi pelanggan berdasarkan pola belanja.</p></li>
+<li><p>Pengelompokan wilayah berdasarkan tingkat penjualan.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="c-asosiasi">
+<h3>c. Asosiasi<a class="headerlink" href="#c-asosiasi" title="Link to this heading">#</a></h3>
+<p>Teknik untuk menemukan hubungan antar item dalam dataset.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>Analisis keranjang belanja (Market Basket Analysis)</p></li>
+<li><p>Jika membeli roti, kemungkinan membeli susu.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="d-regresi">
+<h3>d. Regresi<a class="headerlink" href="#d-regresi" title="Link to this heading">#</a></h3>
+<p>Digunakan untuk memprediksi nilai numerik.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>Prediksi harga rumah</p></li>
+<li><p>Prediksi jumlah penjualan bulan depan</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contoh-kasus">
+<h2>4. Contoh Kasus<a class="headerlink" href="#contoh-kasus" title="Link to this heading">#</a></h2>
+<p>Sebuah toko memiliki data transaksi pelanggan selama satu tahun. Dengan menggunakan teknik asosiasi, ditemukan pola:</p>
+<ul class="simple">
+<li><p>70% pelanggan yang membeli kopi juga membeli gula.</p></li>
+<li><p>60% pelanggan yang membeli roti juga membeli mentega.</p></li>
+</ul>
+<p>Informasi ini dapat digunakan untuk:</p>
+<ul class="simple">
+<li><p>Menata ulang produk di rak</p></li>
+<li><p>Membuat paket promo</p></li>
+<li><p>Meningkatkan strategi pemasaran</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="manfaat-penambangan-data">
+<h2>5. Manfaat Penambangan Data<a class="headerlink" href="#manfaat-penambangan-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Membantu pengambilan keputusan berbasis data</p></li>
+<li><p>Meningkatkan efisiensi bisnis</p></li>
+<li><p>Mengidentifikasi peluang pasar</p></li>
+<li><p>Mendeteksi kecurangan (fraud detection)</p></li>
+<li><p>Memprediksi tren di masa depan</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan">
+<h2>6. Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Penambangan Data adalah proses menemukan pola tersembunyi dalam data.</p></li>
+<li><p>Menggunakan teknik seperti Klasifikasi, Klastering, Asosiasi, dan Regresi.</p></li>
+<li><p>Sangat penting dalam dunia bisnis, pendidikan, kesehatan, dan teknologi.</p></li>
+</ul>
+<p>Penambangan data menjadi salah satu bidang penting dalam perkembangan teknologi informasi modern.</p>
+<h2>Ilustrasi Penambangan Data</h2>
+
+<div style="text-align: center; margin-top: 20px;">
+    <img src="https://www.researchgate.net/profile/Ni-Wardani/publication/351776255/figure/fig1/AS:1026270771032066@1621693427442/Gambar-24-Enam-tahap-siklus-hidup-pengembangan-data-mining-Chapman-2000.png" 
+         alt="Ilustrasi Data Mining" 
+         width="450">
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,14 +532,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Dasar-pendata.html"
-       title="next page">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dasar Penambangan Data</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Selamat Datang</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -432,6 +547,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">1. Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar">2. Konsep Dasar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-dalam-penambangan-data">3. Teknik dalam Penambangan Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-klasifikasi">a. Klasifikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-klastering">b. Klastering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-asosiasi">c. Asosiasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-regresi">d. Regresi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus">4. Contoh Kasus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-penambangan-data">5. Manfaat Penambangan Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">6. Kesimpulan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
