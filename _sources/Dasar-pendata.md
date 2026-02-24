@@ -100,8 +100,8 @@ Penambangan data menjadi salah satu bidang penting dalam perkembangan teknologi 
 
 ## 7. Ilustrasi Penambangan Data
 
-```{image} images/data-mining.png
+```{image} data-mining.png
 :alt: Ilustrasi Penambangan Data
 :width: 500px
 :align: center
-
+```
