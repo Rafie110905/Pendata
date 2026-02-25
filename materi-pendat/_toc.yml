@@ -5,4 +5,4 @@ format: jb-book
 root: intro
 chapters:
 - file: Dasar-pendata
-- file: Data-Understanding
+- file: Penambangan_Data_A_Pertemuan_2
