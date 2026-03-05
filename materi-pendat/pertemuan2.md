@@ -120,7 +120,8 @@ plt.xlabel("Species")
 plt.ylabel("Jumlah")
 plt.xticks(rotation=0)
 plt.show()
-```
+
+![Bar Chart Species](_images/Bar_Chart.png)
 
 # **Histogram semua fitur numerik**
 
@@ -135,7 +136,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Histogram Fitur Numerik Iris](../_images/Histogram_Fitur_Numerik.png)
+![Histogram Fitur](_images/Histogram.png)
 
 # **Boxplot semua fitur numerik (deteksi outlier)**
 
@@ -153,7 +154,7 @@ ax.grid(True)
 plt.show()
 ```
 
-![Boxplot Semua Fitur](../_images/Boxplot.png)
+![Boxplot Semua Fitur](_images/Boxplot.png)
 
 # **Scatter plot petal_length vs petal_width**
 
@@ -171,7 +172,7 @@ plt.legend(title="Species")
 plt.show()
 ```
 
-![Scatter Petal](../_images/Scatter_Petal.png)
+![Scatter Petal](_images/ScatterPlotPetal.png)
 
 # **Scatter plot sepal_length vs sepal_width**
 
@@ -189,7 +190,7 @@ plt.legend(title="Species")
 plt.show()
 ```
 
-![Scatter Sepal](../_images/Scatter_Sepal.png)
+![Scatter Sepal](_images/ScatterPlotSepal.png)
 
 # **Distribusi satu fitur (histogram + KDE) per species**
 
@@ -204,7 +205,7 @@ plt.ylabel("Frekuensi")
 plt.show()
 ```
 
-![Distribusi Petal Length](../_images/Distribusi_Petal_Length.png)
+![Distribusi Petal Length](_images/DistribusiTepalLength.png)
 
 ## **Distribusi Petal Width**
 
@@ -217,7 +218,7 @@ plt.ylabel("Frekuensi")
 plt.show()
 ```
 
-![Distribusi Petal Width](../_images/Distribusi_Petal_Width.png)
+![Distribusi Petal Width](_images/DistribusiTepalWidth.png)
 
 ## **Distribusi Sepal Length**
 
@@ -230,7 +231,7 @@ plt.ylabel("Frekuensi")
 plt.show()
 ```
 
-![Distribusi Sepal Length](../_images/Distribusi_Sepal_Length.png)
+![Distribusi Sepal Length](_images/DistribusiSepalLength.png)
 
 ## **Distribusi Sepal Width**
 
@@ -243,7 +244,7 @@ plt.ylabel("Frekuensi")
 plt.show()
 ```
 
-![Distribusi Sepal Width](../_images/Distribusi_Sepal_Width.png)
+![Distribusi Sepal Width](_images/DistribusiSepalWidth.png)
 
 # **Boxplot per species**
 
@@ -259,7 +260,7 @@ plt.xticks(rotation=0)
 plt.show()
 ```
 
-![Boxplot Petal Length](../_images/Boxplot_Petal_Length.png)
+![Boxplot Petal Length](_images/BoxplotPetalLength.png)
 
 ## **Petal Width per species**
 
@@ -273,4 +274,4 @@ plt.xticks(rotation=0)
 plt.show()
 ```
 
-![Boxplot Petal Width](../_images/Boxplot_Petal_Width.png)
+![Boxplot Petal Width](_images/BoxplotPetalWidth.png)
