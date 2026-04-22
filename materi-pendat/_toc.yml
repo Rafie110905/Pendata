@@ -1,13 +1,10 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
 chapters:
-- file: Dasar-pendata
-- file: pertemuan2
-- file: pertemuan_3_data_preparation_markdown_saja
-- file: logika
-- file: Tugas_Missing_Values
-- file: Tugas_WKNN_Normalisasi
-- file: UTS pendata
+  - file: Dasar-pendata
+  - file: pertemuan2
+  - file: pertemuan_3_data_preparation_markdown_saja
+  - file: logika
+  - file: Tugas_Missing_Values
+  - file: Tugas_WKNN_Normalisasi
+  - file: UTS_pendata
