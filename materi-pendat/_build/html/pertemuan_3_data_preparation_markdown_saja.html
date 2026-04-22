@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>DATA PREPARATION — PERTEMUAN 3 &#8212; Web statis Penambangan Data</title>
   
@@ -15,52 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan_3_data_preparation_markdown_saja';</script>
@@ -70,6 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Pertemuan 2 - Memahami Data" href="pertemuan2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -77,23 +77,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +94,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,16 +101,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -131,9 +132,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -143,12 +148,19 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/Logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/Logo.png" class="logo__image only-light" alt="Web statis Penambangan Data - Home"/>
+    <img src="_static/Logo.png" class="logo__image only-dark pst-js-only" alt="Web statis Penambangan Data - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -175,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas_WKNN_Normalisasi.html">Tugas: Normalisasi Data Min-Max &amp; WKNN (Weighted K-Nearest Neighbor)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_pendata.html">📊 Panduan Analisis Kesuburan Tanah dengan KNN di KNIME</a></li>
 </ul>
 
     </div>
@@ -183,14 +196,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -199,14 +217,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -315,7 +333,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -328,26 +346,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -415,15 +427,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-preparation-pertemuan-3">
-<h1>DATA PREPARATION — PERTEMUAN 3<a class="headerlink" href="#data-preparation-pertemuan-3" title="Permalink to this heading">#</a></h1>
+<h1>DATA PREPARATION — PERTEMUAN 3<a class="headerlink" href="#data-preparation-pertemuan-3" title="Link to this heading">#</a></h1>
 <section id="studi-kasus-iris-data-campuran-mixed-type">
-<h2>Studi Kasus: Iris + Data Campuran (Mixed-Type)<a class="headerlink" href="#studi-kasus-iris-data-campuran-mixed-type" title="Permalink to this heading">#</a></h2>
+<h2>Studi Kasus: Iris + Data Campuran (Mixed-Type)<a class="headerlink" href="#studi-kasus-iris-data-campuran-mixed-type" title="Link to this heading">#</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Identitas Mahasiswa</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p></p></th>
@@ -445,16 +457,17 @@ document.write(`
 </tbody>
 </table>
 </div>
+</div>
 <p>Dokumen ini melanjutkan materi Data Preparation dalam kerangka <strong>CRISP-DM</strong> yang mencakup:
 identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pengukuran jarak</strong>, dan penanganan <strong>data campuran (mixed-type)</strong>.</p>
 </section>
 <hr class="docutils" />
 <section id="tugas-pertemuan-3">
-<h2>✅ Tugas Pertemuan 3<a class="headerlink" href="#tugas-pertemuan-3" title="Permalink to this heading">#</a></h2>
+<h2>✅ Tugas Pertemuan 3<a class="headerlink" href="#tugas-pertemuan-3" title="Link to this heading">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Tugas yang Harus Diselesaikan</p>
 <p>Berikut tiga tugas utama pada Pertemuan 3 beserta status penyelesaiannya:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>No</p></th>
 <th class="head"><p>Tugas</p></th>
@@ -481,6 +494,7 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </tbody>
 </table>
 </div>
+</div>
 <blockquote>
 <div><p><strong>File Orange Workflow:</strong> <a class="reference download internal" download="" href="_downloads/f8178c2510412166fa16abba844f6448/AdultCensus.ows"><code class="xref download docutils literal notranslate"><span class="pre">AdultCensus.ows</span></code></a></p>
 <p><strong>File SQL Database:</strong> <a class="reference download internal" download="" href="_downloads/9c96e35ce5ff43f4f7c3deac69b7ea4f/AdultCensus.sql"><code class="xref download docutils literal notranslate"><span class="pre">AdultCensus.sql</span></code></a></p>
@@ -488,9 +502,9 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </section>
 <hr class="docutils" />
 <section id="konsep-crisp-dm">
-<h2>3.1 Konsep CRISP-DM<a class="headerlink" href="#konsep-crisp-dm" title="Permalink to this heading">#</a></h2>
+<h2>3.1 Konsep CRISP-DM<a class="headerlink" href="#konsep-crisp-dm" title="Link to this heading">#</a></h2>
 <p><strong>CRISP-DM</strong> (Cross-Industry Standard Process for Data Mining) adalah metodologi standar dalam proyek data mining yang terdiri dari 6 fase berurutan:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>No</p></th>
 <th class="head"><p>Fase</p></th>
@@ -524,24 +538,25 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <div><p>Pertemuan ini berfokus pada fase <strong>Data Preparation</strong> — fase paling kritis yang memakan 60–70% waktu proyek data mining.</p>
 </div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="persiapan-lingkungan">
-<h2>3.2 Persiapan Lingkungan<a class="headerlink" href="#persiapan-lingkungan" title="Permalink to this heading">#</a></h2>
+<h2>3.2 Persiapan Lingkungan<a class="headerlink" href="#persiapan-lingkungan" title="Link to this heading">#</a></h2>
 <p>Sebelum memulai analisis, kita impor library yang dibutuhkan. Setiap library memiliki peran khusus dalam proses data preparation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>          <span class="c1"># manipulasi dan analisis data tabular</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>           <span class="c1"># komputasi numerik dan array</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># visualisasi data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>          <span class="c1"># manipulasi dan analisis data tabular</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>           <span class="c1"># komputasi numerik dan array</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>  <span class="c1"># visualisasi data</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">pairwise_distances</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">pairwise_distances</span>
 </pre></div>
 </div>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Library</p></th>
 <th class="head"><p>Fungsi Utama</p></th>
@@ -568,17 +583,18 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <hr class="docutils" />
 <section id="memuat-dataset-awal">
-<h2>3.3 Memuat Dataset Awal<a class="headerlink" href="#memuat-dataset-awal" title="Permalink to this heading">#</a></h2>
+<h2>3.3 Memuat Dataset Awal<a class="headerlink" href="#memuat-dataset-awal" title="Link to this heading">#</a></h2>
 <p>Dataset dimuat kembali untuk memastikan seluruh proses preparation dilakukan pada data mentah yang konsisten.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;IRIS.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><strong>Output <code class="docutils literal notranslate"><span class="pre">df.head()</span></code></strong> — 5 baris pertama dataset Iris:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>sepal_length</p></th>
@@ -626,18 +642,19 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </tr>
 </tbody>
 </table>
+</div>
 <p>Dataset ini berisi <strong>150 baris</strong> dan <strong>5 kolom</strong>, terdiri dari 4 fitur numerik dan 1 kolom target kategorikal.</p>
 </section>
 <hr class="docutils" />
 <section id="penjelasan-fitur-vs-kelas-target">
-<h2>3.4 Penjelasan: Fitur vs Kelas (Target)<a class="headerlink" href="#penjelasan-fitur-vs-kelas-target" title="Permalink to this heading">#</a></h2>
+<h2>3.4 Penjelasan: Fitur vs Kelas (Target)<a class="headerlink" href="#penjelasan-fitur-vs-kelas-target" title="Link to this heading">#</a></h2>
 <p>Memahami perbedaan <strong>fitur</strong> dan <strong>kelas</strong> adalah dasar sebelum melakukan pemodelan supervised learning.</p>
 <ul class="simple">
 <li><p><strong>Fitur (features / attributes)</strong> = kolom input yang menjadi karakteristik bunga, digunakan sebagai variabel independen (X).</p></li>
 <li><p><strong>Kelas (class / label / target)</strong> = kolom output yang ingin diprediksi, merupakan variabel dependen (y).</p></li>
 </ul>
 <p><strong>Tabel Identifikasi Kolom Dataset Iris:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Kolom</p></th>
 <th class="head"><p>Tipe Data</p></th>
@@ -673,6 +690,7 @@ identifikasi missing value, statistik deskriptif, encoding, scaling, <strong>pen
 </tr>
 </tbody>
 </table>
+</div>
 <p>✅ <strong>Kesimpulan:</strong> <code class="docutils literal notranslate"><span class="pre">sepal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">sepal_width</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_length</span></code>, <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> → <strong>fitur</strong>.
 Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-setosa</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-versicolor</span></code>, <code class="docutils literal notranslate"><span class="pre">Iris-virginica</span></code> → <strong>kelas/label</strong>.</p>
 <blockquote>
@@ -681,27 +699,27 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </section>
 <hr class="docutils" />
 <section id="pembersihan-data">
-<h2>Pembersihan Data<a class="headerlink" href="#pembersihan-data" title="Permalink to this heading">#</a></h2>
+<h2>Pembersihan Data<a class="headerlink" href="#pembersihan-data" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="identifikasi-missing-value">
-<h2>3.5 Identifikasi Missing Value<a class="headerlink" href="#identifikasi-missing-value" title="Permalink to this heading">#</a></h2>
+<h2>3.5 Identifikasi Missing Value<a class="headerlink" href="#identifikasi-missing-value" title="Link to this heading">#</a></h2>
 <p>Identifikasi missing value adalah langkah <strong>pertama dan wajib</strong> dalam data preparation. Data yang memiliki nilai kosong dapat menyebabkan error pada algoritma atau hasil analisis yang bias.</p>
 <section id="jumlah-missing-per-kolom">
-<h3>3.5.1 Jumlah Missing per Kolom<a class="headerlink" href="#jumlah-missing-per-kolom" title="Permalink to this heading">#</a></h3>
+<h3>3.5.1 Jumlah Missing per Kolom<a class="headerlink" href="#jumlah-missing-per-kolom" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">missing_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">missing_count</span>
 </pre></div>
 </div>
 </section>
 <section id="persentase-missing-per-kolom">
-<h3>3.5.2 Persentase Missing per Kolom<a class="headerlink" href="#persentase-missing-per-kolom" title="Permalink to this heading">#</a></h3>
+<h3>3.5.2 Persentase Missing per Kolom<a class="headerlink" href="#persentase-missing-per-kolom" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">missing_percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;missing_count&#39;</span><span class="p">:</span> <span class="n">missing_count</span><span class="p">,</span> <span class="s1">&#39;missing_%&#39;</span><span class="p">:</span> <span class="n">missing_percent</span><span class="p">})</span>
 </pre></div>
 </div>
 <p><strong>Hasil Pengecekan Missing Value Dataset Iris:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Kolom</p></th>
 <th class="head text-center"><p>Missing Count</p></th>
@@ -737,6 +755,7 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <div><p>Dataset Iris <strong>tidak memiliki missing value</strong>, sehingga tidak diperlukan proses imputasi (pengisian nilai kosong).</p>
 </div></blockquote>
@@ -744,13 +763,13 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </section>
 <hr class="docutils" />
 <section id="encoding-dan-transformasi">
-<h2>Encoding dan Transformasi<a class="headerlink" href="#encoding-dan-transformasi" title="Permalink to this heading">#</a></h2>
+<h2>Encoding dan Transformasi<a class="headerlink" href="#encoding-dan-transformasi" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="encoding-label">
-<h2>3.6 Encoding Label<a class="headerlink" href="#encoding-label" title="Permalink to this heading">#</a></h2>
+<h2>3.6 Encoding Label<a class="headerlink" href="#encoding-label" title="Link to this heading">#</a></h2>
 <p>Karena algoritma machine learning memerlukan data numerik, maka label <code class="docutils literal notranslate"><span class="pre">species</span></code> bertipe string perlu dikonversi menjadi bentuk numerik menggunakan <code class="docutils literal notranslate"><span class="pre">LabelEncoder</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
 
 <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;species_encoded&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span>
@@ -758,7 +777,7 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </pre></div>
 </div>
 <p><strong>Mapping Encoding:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Label Asli</p></th>
 <th class="head text-center"><p>Encoded</p></th>
@@ -780,10 +799,11 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <hr class="docutils" />
 <section id="pemisahan-fitur-dan-target">
-<h2>3.7 Pemisahan Fitur dan Target<a class="headerlink" href="#pemisahan-fitur-dan-target" title="Permalink to this heading">#</a></h2>
+<h2>3.7 Pemisahan Fitur dan Target<a class="headerlink" href="#pemisahan-fitur-dan-target" title="Link to this heading">#</a></h2>
 <p>Dataset dipisahkan menjadi dua bagian agar model dapat dilatih secara <em>supervised</em>:</p>
 <ul class="simple">
 <li><p><strong>X</strong> → matriks fitur input (4 kolom numerik)</p></li>
@@ -797,13 +817,13 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </section>
 <hr class="docutils" />
 <section id="standardisasi-scaling">
-<h2>Standardisasi Scaling<a class="headerlink" href="#standardisasi-scaling" title="Permalink to this heading">#</a></h2>
+<h2>Standardisasi Scaling<a class="headerlink" href="#standardisasi-scaling" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="alasan-dilakukan-scaling">
-<h2>3.8 Alasan Dilakukan Scaling<a class="headerlink" href="#alasan-dilakukan-scaling" title="Permalink to this heading">#</a></h2>
+<h2>3.8 Alasan Dilakukan Scaling<a class="headerlink" href="#alasan-dilakukan-scaling" title="Link to this heading">#</a></h2>
 <p>Scaling penting untuk algoritma berbasis jarak seperti <strong>KNN</strong>, <strong>K-Means</strong>, dan <strong>SVM</strong> karena fitur dengan rentang nilai lebih besar dapat mendominasi perhitungan jarak.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -811,7 +831,7 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </pre></div>
 </div>
 <p><strong>Output Data Setelah Scaling (5 baris pertama):</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>sepal_length</p></th>
@@ -853,18 +873,19 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 <p>Setelah scaling, seluruh fitur memiliki <strong>mean ≈ 0</strong> dan <strong>standar deviasi ≈ 1</strong>, sehingga tidak ada fitur yang mendominasi.</p>
 </section>
 <hr class="docutils" />
 <section id="mengukur-jarak-distance">
-<h2>Mengukur Jarak (Distance)<a class="headerlink" href="#mengukur-jarak-distance" title="Permalink to this heading">#</a></h2>
+<h2>Mengukur Jarak (Distance)<a class="headerlink" href="#mengukur-jarak-distance" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="cara-mengukur-jarak-untuk-data-iris">
-<h2>3.13 Cara Mengukur Jarak untuk Data Iris<a class="headerlink" href="#cara-mengukur-jarak-untuk-data-iris" title="Permalink to this heading">#</a></h2>
+<h2>3.13 Cara Mengukur Jarak untuk Data Iris<a class="headerlink" href="#cara-mengukur-jarak-untuk-data-iris" title="Link to this heading">#</a></h2>
 <p>Karena seluruh fitur Iris bertipe numerik, terdapat beberapa metrik jarak yang dapat digunakan. <strong>Scaling wajib dilakukan</strong> sebelum menghitung jarak.</p>
 <p><strong>Perbandingan Metrik Jarak Numerik:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Metrik</p></th>
 <th class="head"><p>Formula</p></th>
@@ -886,8 +907,9 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 <section id="scaling-data">
-<h3>3.13.1 Scaling Data<a class="headerlink" href="#scaling-data" title="Permalink to this heading">#</a></h3>
+<h3>3.13.1 Scaling Data<a class="headerlink" href="#scaling-data" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">numeric_cols</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -895,8 +917,8 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </div>
 </section>
 <section id="distance-matrix-euclidean">
-<h3>3.13.2 Distance Matrix — Euclidean<a class="headerlink" href="#distance-matrix-euclidean" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">pairwise_distances</span>
+<h3>3.13.2 Distance Matrix — Euclidean<a class="headerlink" href="#distance-matrix-euclidean" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">pairwise_distances</span>
 
 <span class="n">D_euclid</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Euclidean D[0:5, 0:5]:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">D_euclid</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
@@ -904,20 +926,20 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </div>
 </section>
 <section id="distance-matrix-manhattan">
-<h3>3.13.3 Distance Matrix — Manhattan<a class="headerlink" href="#distance-matrix-manhattan" title="Permalink to this heading">#</a></h3>
+<h3>3.13.3 Distance Matrix — Manhattan<a class="headerlink" href="#distance-matrix-manhattan" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D_manhattan</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;manhattan&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Manhattan D[0:5, 0:5]:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">D_manhattan</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="distance-matrix-minkowski-p-3">
-<h3>3.13.4 Distance Matrix — Minkowski (p=3)<a class="headerlink" href="#distance-matrix-minkowski-p-3" title="Permalink to this heading">#</a></h3>
+<h3>3.13.4 Distance Matrix — Minkowski (p=3)<a class="headerlink" href="#distance-matrix-minkowski-p-3" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D_minkowski</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minkowski(p=3) D[0:5, 0:5]:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">D_minkowski</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 <p><strong>Perbandingan Nilai Jarak antara Iris-0 dan Iris-50 (setosa vs versicolor) setelah scaling:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Metrik</p></th>
 <th class="head text-center"><p>Nilai Jarak</p></th>
@@ -939,17 +961,18 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 </section>
 <hr class="docutils" />
 <section id="distance-matrix-di-orange">
-<h2>Distance Matrix di Orange<a class="headerlink" href="#distance-matrix-di-orange" title="Permalink to this heading">#</a></h2>
+<h2>Distance Matrix di Orange<a class="headerlink" href="#distance-matrix-di-orange" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="distance-matrix-di-orange-workflow">
-<h2>3.14 Distance Matrix di Orange (Workflow)<a class="headerlink" href="#distance-matrix-di-orange-workflow" title="Permalink to this heading">#</a></h2>
+<h2>3.14 Distance Matrix di Orange (Workflow)<a class="headerlink" href="#distance-matrix-di-orange-workflow" title="Link to this heading">#</a></h2>
 <p>Orange menyediakan widget <strong>Distances</strong> yang langsung menghitung distance matrix tanpa perlu menulis kode.</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Langkah</p></th>
 <th class="head"><p>Widget</p></th>
@@ -979,17 +1002,18 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <hr class="docutils" />
 <section id="jarak-data-campuran-mixed-type">
-<h2>Jarak Data Campuran (Mixed-Type)<a class="headerlink" href="#jarak-data-campuran-mixed-type" title="Permalink to this heading">#</a></h2>
+<h2>Jarak Data Campuran (Mixed-Type)<a class="headerlink" href="#jarak-data-campuran-mixed-type" title="Link to this heading">#</a></h2>
 </section>
 <hr class="docutils" />
 <section id="pengukuran-jarak-pada-data-campuran-adult-census-income">
-<h2>3.15 Pengukuran Jarak pada Data Campuran — Adult Census Income<a class="headerlink" href="#pengukuran-jarak-pada-data-campuran-adult-census-income" title="Permalink to this heading">#</a></h2>
+<h2>3.15 Pengukuran Jarak pada Data Campuran — Adult Census Income<a class="headerlink" href="#pengukuran-jarak-pada-data-campuran-adult-census-income" title="Link to this heading">#</a></h2>
 <p>Dataset <strong>Adult Census Income</strong> adalah data campuran (<em>mixed-type</em>) yang mengandung <strong>keempat tipe data sekaligus</strong>: numerik, ordinal, nominal/kategorikal, dan biner. Dataset ini digunakan untuk memprediksi <strong>apakah pendapatan seseorang melebihi $50K per tahun</strong>.</p>
 <section id="profil-dataset-adult-census-income">
-<h3>3.15.1 Profil Dataset Adult Census Income<a class="headerlink" href="#profil-dataset-adult-census-income" title="Permalink to this heading">#</a></h3>
+<h3>3.15.1 Profil Dataset Adult Census Income<a class="headerlink" href="#profil-dataset-adult-census-income" title="Link to this heading">#</a></h3>
 <p>Dataset berasal dari <strong>US Census Bureau</strong> dan terdapat <strong>48.842 baris</strong> dan <strong>15 kolom</strong> fitur. Tersedia dalam dua format: file CSV (<code class="docutils literal notranslate"><span class="pre">adult.csv</span></code>) dan tabel PostgreSQL (<code class="docutils literal notranslate"><span class="pre">adult_census</span></code> di database <code class="docutils literal notranslate"><span class="pre">AdultCensus</span></code>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_adult</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../DataCampuranPertemuan3/AdultCensusIncome/adult.csv&quot;</span><span class="p">)</span>
 <span class="n">df_adult</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -997,8 +1021,8 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </div>
 </section>
 <section id="identifikasi-tipe-data-per-kolom-mixed-type">
-<h3>3.15.2 Identifikasi Tipe Data per Kolom (Mixed-Type)<a class="headerlink" href="#identifikasi-tipe-data-per-kolom-mixed-type" title="Permalink to this heading">#</a></h3>
-<table class="table">
+<h3>3.15.2 Identifikasi Tipe Data per Kolom (Mixed-Type)<a class="headerlink" href="#identifikasi-tipe-data-per-kolom-mixed-type" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Kolom</p></th>
 <th class="head"><p>Tipe Data</p></th>
@@ -1068,13 +1092,14 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <div><p><strong>Kesimpulan:</strong> Dataset Adult Census Income adalah contoh data campuran yang kaya — terdapat 5 fitur numerik, 2 fitur ordinal, 7 fitur nominal, dan 1 fitur biner sebagai target.</p>
 </div></blockquote>
 </section>
 <section id="mengapa-data-campuran-memerlukan-beberapa-metrik">
-<h3>3.15.3 Mengapa Data Campuran Memerlukan Beberapa Metrik?<a class="headerlink" href="#mengapa-data-campuran-memerlukan-beberapa-metrik" title="Permalink to this heading">#</a></h3>
-<table class="table">
+<h3>3.15.3 Mengapa Data Campuran Memerlukan Beberapa Metrik?<a class="headerlink" href="#mengapa-data-campuran-memerlukan-beberapa-metrik" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tipe Data</p></th>
 <th class="head"><p>Masalah Jika Salah Metrik</p></th>
@@ -1100,11 +1125,12 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="koneksi-ke-database-postgresql">
-<h3>3.15.4 Koneksi ke Database PostgreSQL<a class="headerlink" href="#koneksi-ke-database-postgresql" title="Permalink to this heading">#</a></h3>
+<h3>3.15.4 Koneksi ke Database PostgreSQL<a class="headerlink" href="#koneksi-ke-database-postgresql" title="Link to this heading">#</a></h3>
 <p>Data Adult Census Income dapat dimuat langsung dari database PostgreSQL menggunakan widget <strong>SQL Table</strong> di Orange:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Nilai</p></th>
@@ -1131,12 +1157,13 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="workflow-orange-pengukuran-jarak-pada-data-campuran">
-<h3>3.15.5 Workflow Orange — Pengukuran Jarak pada Data Campuran<a class="headerlink" href="#workflow-orange-pengukuran-jarak-pada-data-campuran" title="Permalink to this heading">#</a></h3>
+<h3>3.15.5 Workflow Orange — Pengukuran Jarak pada Data Campuran<a class="headerlink" href="#workflow-orange-pengukuran-jarak-pada-data-campuran" title="Link to this heading">#</a></h3>
 <p>Orange Data Mining digunakan untuk mengukur jarak menggunakan <strong>4 metrik berbeda</strong>. File workflow: <code class="docutils literal notranslate"><span class="pre">AdultCensus.ows</span></code></p>
 <p><strong>Penjelasan 4 Metrik yang Dipakai:</strong></p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Metrik</p></th>
 <th class="head"><p>Cocok Untuk</p></th>
@@ -1162,13 +1189,14 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </tr>
 </tbody>
 </table>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Mengapa 4 Metrik Sekaligus pada Adult Census Income?</p>
 <p>Dataset ini sangat heterogen — ada 5 kolom numerik, 2 ordinal, 7 nominal, dan 1 biner. Tidak ada satu metrik tunggal yang optimal untuk semua tipe sekaligus.</p>
 </div>
 </section>
 <section id="download-file-orange-workflow-sql">
-<h3>3.15.6 Download File Orange Workflow &amp; SQL<a class="headerlink" href="#download-file-orange-workflow-sql" title="Permalink to this heading">#</a></h3>
+<h3>3.15.6 Download File Orange Workflow &amp; SQL<a class="headerlink" href="#download-file-orange-workflow-sql" title="Link to this heading">#</a></h3>
 <div class="note admonition">
 <p class="admonition-title">📥 Download File</p>
 <p><strong>Orange Workflow:</strong>
@@ -1180,7 +1208,7 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 </section>
 <hr class="docutils" />
 <section id="menyimpan-dataset-final-untuk-modeling">
-<h2>3.16 Menyimpan Dataset Final untuk Modeling<a class="headerlink" href="#menyimpan-dataset-final-untuk-modeling" title="Permalink to this heading">#</a></h2>
+<h2>3.16 Menyimpan Dataset Final untuk Modeling<a class="headerlink" href="#menyimpan-dataset-final-untuk-modeling" title="Link to this heading">#</a></h2>
 <p>Setelah seluruh proses preparation selesai, dataset yang sudah di-scale disimpan sebagai file CSV baru untuk digunakan pada tahap <strong>Modeling</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_modeling</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">df_modeling</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span>
@@ -1221,11 +1249,10 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="pertemuan2.html"
@@ -1245,23 +1272,23 @@ Sedangkan <code class="docutils literal notranslate"><span class="pre">Iris-seto
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#studi-kasus-iris-data-campuran-mixed-type">Studi Kasus: Iris + Data Campuran (Mixed-Type)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-pertemuan-3">✅ Tugas Pertemuan 3</a></li>
@@ -1322,9 +1349,10 @@ By Moh Rafie Nazar J
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1348,8 +1376,8 @@ By Moh Rafie Nazar J
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

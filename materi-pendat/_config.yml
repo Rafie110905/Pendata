@@ -30,3 +30,6 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+  # Tambahkan ini di baris paling bawah _config.yml
+exclude_patterns: [_build, Thumbs.db, .DS_Store, ".virtual_documents", _images, .myst, Tugas]
