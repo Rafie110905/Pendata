@@ -655,6 +655,88 @@ plt.show()
 ![image](https://www.image2url.com/r2/default/images/1780469683913-2336a13e-03a9-4c42-9146-9ebc1d827f3e.png)
 
 ---
+## 🔮 4. Prediksi NO₂ untuk Hari Berikutnya
+
+Setelah model KNN Regression selesai dilatih, langkah selanjutnya adalah melakukan **prediksi nilai NO₂ untuk hari berikutnya**. Prediksi dilakukan dengan menggunakan beberapa nilai NO₂ terakhir sebagai data masukan (input) sesuai dengan jumlah lag yang digunakan pada model.
+
+Pada model lag 2 hari, sistem mengambil dua nilai NO₂ terakhir dari dataset yang telah dinormalisasi. Nilai tersebut kemudian dibentuk menjadi satu baris data (feature vector) yang sesuai dengan format input model KNN. Selanjutnya model melakukan prediksi terhadap nilai NO₂ pada hari berikutnya.
+
+> 📌 Karena hasil prediksi masih dalam bentuk data yang telah dinormalisasi (skala 0–1), dilakukan proses **inverse transform** menggunakan `MinMaxScaler` untuk mengembalikan nilai prediksi ke satuan NO₂ asli **(mol/m²)**.
+
+---
+
+### 🔵 4.1 Prediksi Menggunakan Model Lag 2 Hari
+
+```python
+# Ambil 2 nilai NO2 terakhir sebagai input
+last_data = df['NO2_scaled'].tail(2).values
+X_next    = last_data.reshape(1, -1)
+
+# Prediksi menggunakan model KNN lag 2
+pred_next_scaled = knn_2.predict(X_next)
+
+# Inverse transform → kembalikan ke skala asli
+pred_next = scaler.inverse_transform(
+    pred_next_scaled.reshape(-1, 1)
+)
+
+print("Prediksi NO2 Besok:")
+print(pred_next[0][0])
+```
+
+**🖥️ Output:**
+```
+Prediksi NO2 Besok:
+3.3574640599999994e-05
+```
+
+> 🎯 **Hasil prediksi model lag 2 hari = 3.3575 × 10⁻⁵ mol/m²**
+
+---
+
+### 🟢 4.2 Prediksi Menggunakan Model Lag 4 Hari
+
+Selanjutnya dilakukan prediksi menggunakan model lag 4 hari. Pada model ini digunakan **empat nilai NO₂ terakhir** sebagai fitur masukan.
+
+```python
+# Ambil 4 nilai NO2 terakhir sebagai input
+last_data = df['NO2_scaled'].tail(4).values
+X_next    = last_data.reshape(1, -1)
+
+# Prediksi menggunakan model KNN lag 4
+pred_next_scaled = knn_4.predict(X_next)
+
+# Inverse transform → kembalikan ke skala asli
+pred_next = scaler.inverse_transform(
+    pred_next_scaled.reshape(-1, 1)
+)
+
+print("Prediksi NO2 Besok =", pred_next[0][0])
+```
+
+**🖥️ Output:**
+```
+Prediksi NO2 Besok = 2.9225191999999997e-05
+```
+
+> 🎯 **Hasil prediksi model lag 4 hari = 2.9225 × 10⁻⁵ mol/m²**
+
+---
+
+### 📊 4.3 Perbandingan Hasil Prediksi
+
+Perbedaan hasil prediksi antara lag 2 dan lag 4 terjadi karena jumlah data historis yang digunakan sebagai acuan model berbeda. Model dengan performa evaluasi terbaik (RMSE lebih kecil dan R² lebih tinggi) dipilih sebagai model utama.
+
+| 🤖 Model | 🔢 Lag | 📉 RMSE | 📈 R² | 🎯 MAPE | 🔮 Prediksi Besok |
+|---------|--------|---------|-------|---------|-------------------|
+| KNN 2 Hari  | 2  | 0.123947 | 0.7059 | 18.35% | 3.3575 × 10⁻⁵ mol/m² |
+| KNN 4 Hari  | 4  | 0.117125 | **0.7374** ⭐ | **17.19%** ⭐ | **2.9225 × 10⁻⁵ mol/m²** 🏆 |
+| KNN 10 Hari | 10 | 0.125803 | 0.6971 | 20.32% | — |
+| KNN 30 Hari | 30 | 0.157267 | 0.4964 | 24.34% | — |
+
+> 💡 **Model utama yang dipilih: KNN 4 Hari Sebelumnya** karena memiliki RMSE terkecil dan R² tertinggi. 🏆
+
+---
 
 ## ✅ Kesimpulan
 
@@ -666,9 +748,11 @@ Hasil evaluasi model KNN Regression pada data NO₂ Bangkalan 2024–2026 menunj
 
 3. 📊 **Hasil data 2024–2026 jauh lebih baik** dibanding referensi (2023–2025) yang hanya memiliki R² ~0.14 dan MAPE >60%. Ini karena proses preprocessing yang lebih lengkap (outlier removal IQR + interpolasi).
 
-4. 🔬 **Uji korelasi** menunjukkan 8 lag (t-1 s/d t-8) memiliki korelasi >0.5, lebih banyak dari referensi yang hanya 4 lag. Ini mengindikasikan pola NO₂ yang lebih konsisten di periode 2024–2026.
+4. 🔬 **Uji korelasi** menunjukkan 8 lag (t-1 s/d t-8) memiliki korelasi >0.5, menunjukkan pola NO₂ yang lebih konsisten di periode 2024–2026.
 
-5. 🚀 Meski KNN dengan 4 lag sudah cukup baik (R²=0.73), untuk akurasi lebih tinggi dapat dicoba model lain seperti **LSTM**, **Random Forest**, atau **XGBoost**.
+5. 🔮 **Prediksi hari berikutnya** menggunakan model lag 4 menghasilkan estimasi kadar NO₂ sebesar **2.9225 × 10⁻⁵ mol/m²**, sementara model lag 2 menghasilkan **3.3575 × 10⁻⁵ mol/m²**.
+
+6. 🚀 Meski KNN dengan 4 lag sudah cukup baik (R²=0.73), untuk akurasi lebih tinggi dapat dicoba model lain seperti **LSTM**, **Random Forest**, atau **XGBoost**.
 
 ---
 
